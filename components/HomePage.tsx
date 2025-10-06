@@ -1,6 +1,8 @@
 import React from 'react';
 import { Page } from '../types';
 import { useAppContext } from '../context/AppContext';
+import Slideshow from './shared/Slideshow';
+import { PRODUCT_CATEGORIES } from '../constants';
 
 interface HomePageProps {
     onNavigate: (page: Page) => void;
@@ -45,23 +47,11 @@ const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
         </button>
       </section>
 
-      {/* Current Specials */}
+      {/* Products Slideshow */}
       <section>
-        <h3 className="text-2xl font-bold text-center text-gray-800 mb-6">Current Specials</h3>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {state.specials.map(special => (
-            <div key={special.id} className="bg-white rounded-lg shadow-md overflow-hidden flex flex-col sm:flex-row items-center transition-shadow hover:shadow-xl">
-              <img src={special.imageUrl} alt={special.title} className="w-full sm:w-1/3 h-32 sm:h-full object-cover"/>
-              <div className="p-4 flex-grow">
-                <h4 className="font-bold text-lg text-yellow-700">{special.title}</h4>
-                <p className="text-gray-600 text-sm mt-1">{special.description}</p>
-              </div>
-            </div>
-          ))}
-          {state.specials.length === 0 && <p className="text-center text-gray-500 col-span-full">No specials at the moment. Check back soon!</p>}
-        </div>
+        <h3 className="text-2xl font-bold text-center text-gray-800 mb-6">Explore Our Products</h3>
+        <Slideshow images={PRODUCT_CATEGORIES} />
       </section>
-
     </div>
   );
 };

@@ -29,20 +29,6 @@ export const FULL_ABOUT_TEXT = `
 `;
 
 export const INITIAL_STATE: AppState = {
-  specials: [
-    {
-      id: 1,
-      title: 'Red Dot Sale on Fishing Lures!',
-      description: 'Browse trough a wide varity of lures at give away Prices. Stock up for your next big catch.',
-      imageUrl: 'https://res.cloudinary.com/dsexriquh/image/upload/v1757417455/Screenshot_2025-09-08_121639_lnn72h.png'
-    },
-    {
-      id: 2,
-      title: 'Get your bicycles serviced and ready!',
-      description: 'Our expert mechanics are ready to get your bike in top condition for your next adventure.',
-      imageUrl: 'https://res.cloudinary.com/dsexriquh/image/upload/v1757417215/515320812_1337782804388653_4801594132892939502_n_okxhlu.jpg'
-    }
-  ],
   aboutContent: FULL_ABOUT_TEXT,
   contactInfo: {
     address: "Kotie St, Ellisras, South Africa",

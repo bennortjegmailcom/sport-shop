@@ -3,14 +3,6 @@ export enum Page {
   PRODUCTS = 'PRODUCTS',
   ABOUT = 'ABOUT',
   CONTACT = 'CONTACT',
-  ADMIN = 'ADMIN',
-}
-
-export interface Special {
-  id: number;
-  title: string;
-  description: string;
-  imageUrl: string;
 }
 
 export interface ProductCategory {
@@ -28,7 +20,6 @@ export interface ContactInfo {
 }
 
 export interface AppState {
-  specials: Special[];
   aboutContent: string;
   contactInfo: ContactInfo;
 }

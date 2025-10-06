@@ -5,7 +5,6 @@ import HomePage from './components/HomePage';
 import AboutPage from './components/AboutPage';
 import ProductsPage from './components/ProductsPage';
 import ContactPage from './components/ContactPage';
-import AdminPage from './components/AdminPage';
 import { Page } from './types';
 import { AppProvider } from './context/AppContext';
 
@@ -27,8 +26,6 @@ const App: React.FC = () => {
         return <ProductsPage />;
       case Page.CONTACT:
         return <ContactPage />;
-      case Page.ADMIN:
-        return <AdminPage />;
       default:
         return <HomePage onNavigate={handleNavigation} />;
     }
