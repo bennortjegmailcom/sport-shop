@@ -19,12 +19,6 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
                     {link.label}
                 </button>
             ))}
-             <button 
-              onClick={() => onNavigate(Page.ADMIN)}
-                className="text-gray-400 hover:text-yellow-400 transition-colors font-semibold text-sm"
-            >
-              Admin Panel
-            </button>
         </div>
        <div className="flex justify-center items-center space-x-2 mt-4">
             <p className="text-xs text-gray-500">Designed and built by Ben</p>
